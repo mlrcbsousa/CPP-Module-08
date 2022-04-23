@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:36:20 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/23 22:25:26 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/23 22:33:54 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@
 # define ERROR(x) std::cerr << x << std::endl
 
 template< typename T >
-int	easyfind(T numbers, int n)
+int &	easyfind(T & container, int n)
 {
 	typename T::iterator it;
 
-	it = find(numbers.begin(), numbers.end(), n);
+	it = find(container.begin(), container.end(), n);
 
-	if (it == numbers.end())
+	if (it == container.end())
 		throw std::exception();
 
 	return *it;
