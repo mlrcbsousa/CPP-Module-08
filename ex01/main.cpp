@@ -6,7 +6,7 @@
 /*   By: msousa <mlrcbsousa@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 16:03:26 by msousa            #+#    #+#             */
-/*   Updated: 2022/04/25 17:35:42 by msousa           ###   ########.fr       */
+/*   Updated: 2022/04/25 17:51:38 by msousa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,12 @@ int	main( void )
 
 	try { sp.addNumber(11); }
 	catch( Span::ListFullException &e ) { ERROR(e.what()); }
+
+	std::vector<int> 	zeroes(10000, 0);
+
+	sp = Span(11000);
+	sp.addNumber(zeroes);
+	LOG(sp);
 
   	return 0;
 }
